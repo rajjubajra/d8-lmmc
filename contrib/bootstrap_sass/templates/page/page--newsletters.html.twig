@@ -1,0 +1,87 @@
+<div id="page-wrapper">
+    <div id="page">
+  {# HEADER #}
+      {% include '@bootstrap_sass/includes/header.html.twig' %}
+  {# HIGHLIGHTED #}
+      {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
+  {# FEATURED-TOP #}
+      {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+
+
+
+
+    <div id="main-wrapper" class="layout-main-wrapper clearfix articles">
+      {% block content %}
+        <div id="main" class="{{ container }}">
+          {{ page.breadcrumb }}
+          <div class="row row-offcanvas row-offcanvas-left clearfix">
+              <main{{ content_attributes }}>
+                <section class="section">
+                  <a id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
+                </section>
+              </main>
+            {% if page.sidebar_first %}
+              <div{{ sidebar_first_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_first }}
+                </aside>
+              </div>
+            {% endif %}
+            {% if page.sidebar_second %}
+              <div{{ sidebar_second_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_second }}
+                </aside>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+
+
+
+{# FEATURED-BOTTOM #}
+{% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
+{# FOOTER #}  
+{% include '@bootstrap_sass/includes/footer.html.twig' %}
+
+  </div>
+</div>
+<script>
+  /*
+  const ui_view_more = document.querySelectorAll('.view-more-newsletter');
+  //console.log(ui_view_more);
+  
+  let node_href = ui_view_more[0].lastChild.lastElementChild.href;
+  console.log(node_href);
+
+  function nodeToNews(node_href){
+      //href path to array
+        let pathArr = node_href.split("/");
+        console.log('old Path arr',pathArr);
+        // replace 'node' to 'news'
+        var index = pathArr.indexOf('node');
+        if (~index) {
+          pathArr[index] = 'node,news';
+        }
+        console.log(pathArr);
+        const newPathArr = pathArr.join("/");
+        console.log('New Path array',newPathArr);
+        return newPathArr;
+        console.log('NEW PATH ARR ',newPathArr);
+  }
+  
+  for(let i = 0; i <= node_href.length; i++){
+  
+  // ui_view_more[i].lastChild.lastElementChild.href = nodeToNews(ui_view_more[i].lastChild.lastElementChild.href);
+
+  }
+  
+  //ui_view_more[1].lastChild.lastElementChild.href = "#";
+  */
+
+
+
+</script>

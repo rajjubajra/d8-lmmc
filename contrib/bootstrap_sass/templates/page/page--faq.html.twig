@@ -1,0 +1,120 @@
+<div id="page-wrapper">
+  <div id="page">
+{# HEADER #}
+    {% include '@bootstrap_sass/includes/header.html.twig' %}
+{# HIGHLIGHTED #}
+    {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
+{# FEATURED-TOP #}
+    {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+
+
+
+  <div id="main-wrapper" class="layout-main-wrapper clearfix event">
+    {% block content %}
+      <div id="main" class="{{ container }}">
+        {{ page.breadcrumb }}
+        <div class="row row-offcanvas row-offcanvas-left clearfix">
+            <main{{ content_attributes }}>
+              <section class="section">
+                <a id="main-content" tabindex="-1"></a>
+                {{ page.content }}
+
+                {# FAQ ACCORDION #}
+                <div class="accordion" id="accordionFaq"></div>
+
+            
+
+              </section>
+            </main>
+          {% if page.sidebar_first %}
+            <div{{ sidebar_first_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_first }}
+              </aside>
+            </div>
+          {% endif %}
+          {% if page.sidebar_second %}
+            <div{{ sidebar_second_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+
+
+
+{# FEATURED-BOTTOM #}
+{% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
+{# FOOTER #}  
+{% include '@bootstrap_sass/includes/footer.html.twig' %}
+
+</div>
+</div>
+
+<script>
+//UI for FAQ
+const uiFaq = document.querySelector('#accordionFaq');  
+console.log('ui FAQ',uiFaq);
+  /** 
+* REQUEST FAQ FROM DATABASE */
+// rootUrl defined on getNstore_quote.js file
+const faqUrl = window.location.href.slice(0,-3);
+//console.log('FAQ URL ',faqUrl);
+const faq = `${faqUrl}jsonapi/node/faq`;
+console.log('FAQ ? ',faq);
+
+
+var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+      
+      // Typical action to be performed when the document is ready:
+      // document.getElementById("demo").innerHTML = xhttp.responseText;
+      let response = JSON.parse(xhttp.responseText);
+      
+      //console.log(' response text ', xhttp.responseText);
+      //console.log('response parse', response.data);
+      // console.log('LENGTH',response.data.length);
+       
+       let db_arr = response.data;       
+       let length = db_arr.length;
+
+       console.log(db_arr);
+       console.log(db_arr[0]);
+       console.log(db_arr[0].attributes.title);
+
+       //uiFaq.innerHTML = db_arr[0].attributes.title + `<div>${db_arr[0].attributes.field_faq_question_answer.value}</div>`;
+
+
+       db_arr.map((item, index)=>{
+        // return uiFaq.innerHTML += `<h1>${item.attributes.title}</h1><div>${item.attributes.field_faq_question_answer.value}</div>`
+        let showHide = index === 0 ? 'show' : '';
+        return uiFaq.innerHTML += ` <div class="card">
+            <div class="card-header" id="heading_${index}">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_${index}" aria-expanded="true" aria-controls="collapse_${index}">
+                  ${item.attributes.title}
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapse_${index}" class="collapse ${showHide}" aria-labelledby="heading_${index}" data-parent="#accordionFaq">
+              <div class="card-body">
+                ${item.attributes.field_faq_question_answer.value}
+              </div>
+            </div>
+          </div>`
+      })
+  
+      
+  };
+}
+ xhttp.open("GET", faq, true);
+ xhttp.send();
+
+
+</script>

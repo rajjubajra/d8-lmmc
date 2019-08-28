@@ -1,0 +1,209 @@
+<div id="page-wrapper">
+  <div id="page">
+{# HEADER #}
+    {% include '@bootstrap_sass/includes/header.html.twig' %}
+{# HIGHLIGHTED #}
+    {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
+{# FEATURED-TOP #}
+    {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+
+
+
+  <div id="main-wrapper" class="layout-main-wrapper clearfix event">
+    {% block content %}
+      <div id="main" class="{{ container }}">
+        {{ page.breadcrumb }}
+        <div class="row row-offcanvas row-offcanvas-left clearfix">
+            <main{{ content_attributes }}>
+              <section class="section">
+                <a id="main-content" tabindex="-1"></a>
+                {{ page.content }}
+                  <h1>Event Calendar</h1>
+                <ul id="event-calendar"></ul>
+
+              </section>
+            </main>
+          {% if page.sidebar_first %}
+            <div{{ sidebar_first_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_first }}
+              </aside>
+            </div>
+          {% endif %}
+          {% if page.sidebar_second %}
+            <div{{ sidebar_second_attributes }}>
+              <aside class="section" role="complementary">
+                {{ page.sidebar_second }}
+              </aside>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+
+
+
+{# FEATURED-BOTTOM #}
+{% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
+{# FOOTER #}  
+{% include '@bootstrap_sass/includes/footer.html.twig' %}
+
+</div>
+</div>
+
+
+<script>
+  
+  //console.log('WINDOW LOCATION: ',window.location);
+  //ui for event calendar
+  const ui_eventCalendar = document.querySelector("#event-calendar");
+  
+  //josn data for event-calendar
+  //const url_root = ;
+  const url_eventCalendar = `${window.location.href.slice(0,-14)}rest/event-calendar?_format=json`;
+
+  const href_event_calendar = `http://localhost:8888/Drupal/d8-lmmc/web/event-calendar`;
+  
+
+
+  console.log('URL EVENT CAL', url_eventCalendar);
+
+
+  //today's date
+  let today = new Date(); 
+
+
+  //Trim display text
+  function trimEventDetail(txt){
+    let text = txt.length <= 300 ? txt : txt.substring(0, 300) + '...';
+    return text;
+  }
+  //View more button if text length is more than 300 characters
+  function ViewMoreButton(text, id){
+    let button = text.length <= 300 ? '' : `<a href="${id}">view more</a>`;
+    return button;
+  }
+  //view Event Date and Venue block
+  function eventDate(dtFrom, dtTo){
+
+    //DATE : Y:m:d
+    function toDate(dt){
+      let d = new Date(dt);
+      let Yr = d.getFullYear();
+      let Mn = d.getMonth() + 1;
+      let dy = d.getDate();
+      return `${Yr}-${Mn}-${dy}`;
+    }
+
+    //Time : H:i
+    function toTime(dt){
+      let t = new Date(dt);
+      let Hr = t.getHours();
+      //javascript display 03 minute to 3 so by 0 need to be defined 
+      //if the minute is less than 10 minutes
+      let Min = t.getMinutes() < 10 ? `0${t.getMinutes()}` : t.getMinutes();
+
+      return dt === '' ? '' : `${Hr}:${Min}`;
+
+    }
+    
+    
+    //if event date_to is empty or same to date_from do not display 'to'
+    let eventDate = dtTo === '' || toDate(dtFrom) === toDate(dtTo)
+                  ? toDate(dtFrom)
+                  : `${toDate(dtFrom)} to ${toDate(dtTo)}`  
+    return eventDate;             
+          
+  }
+  //event details
+  function eventDetail( title, text, date, time, venue, uuid){
+    //display event detail with Image and without Image diff layout
+    let eventDetail = `
+              <div class="event-calendar-list">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-md-12"><h2>${title}</h2></div>
+                      </div>    
+                      <div class="row">
+                        <div class="col-md-8">
+                          <p>${trimEventDetail(text)}</p>
+                        </div>
+                        <div class="col-md-4">
+                          <ul class="event-calendar">
+                            <li><i class="far fa-calendar-alt"></i>${date}</li>
+                            <li><i class="far fa-clock"></i>${time}</li>
+                            <li><i class="fas fa-home"></i>${venue}</li>
+                          </ul>  
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form>
+                          <input value="${uuid}" name="uuid"  />
+                          <button class="view-details">View Details</button>  
+                        </form>  
+                      </div>
+                    </div>
+                  </div>
+              </div>  
+              `;  
+    return eventDetail;                
+  }
+  
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      
+      // Typical action to be performed when the document is ready:
+      // document.getElementById("demo").innerHTML = xhttp.responseText;
+      let response = JSON.parse(xhttp.responseText);
+      
+      //console.log(' response text ', xhttp.responseText);
+      //console.log('response parse', response.data);
+      //console.log('LENGTH',response.data.length);
+      
+      //let db_arr = response.data;   
+
+      let db_arr = JSON.parse(this.responseText);       
+      //let length = db_arr.length;
+
+      console.log(db_arr[0]);
+      //console.log(db_arr[0]);
+      //console.log(db_arr[0].title);
+
+      
+      db_arr.map((item, index)=>{
+
+        //DO NOT DISPLAY OLDER THAN TODAY'S DATE
+       //if(toDate(item.field_event_date_from) < toDate(today) ){
+          /*
+          ui_eventCalendar.innerHTML +=  `<p><b>date from -${toDate(item.field_event_date_from)} - today:${toDate(today)}</b></p>`;
+          */
+          //return '';
+        //}
+
+        //Insert content to id="ui_eventCalendar" div   
+               
+        return ui_eventCalendar.innerHTML += ` 
+        <div class="row">
+          ${eventDetail(
+              item.title ,
+              item.field_event, 
+              item.field_event_date_from,
+              item.field_event_time_from,
+              item.field_event_venue,
+              item.uuid
+              )}
+        </div>`
+      })
+  };
+}
+xhttp.open("GET", url_eventCalendar, true);
+xhttp.send();
+
+
+
+
+</script>

@@ -1,0 +1,18 @@
+global-styling:
+  version: VERSION
+  js: 
+    js/popper.min.js: {}
+    js/bootstrap.min.js: {}
+    js/global.js: {}
+    js/getNstore_quote.js: {}
+    js/getNstore_dhammapada.js: {}
+    js/app_todo.js: {}
+    js/front_page.js: {}
+    
+  
+  css:
+    component:
+      css/style.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
