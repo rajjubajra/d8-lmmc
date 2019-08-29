@@ -68,7 +68,7 @@ function setGreetings(){
       }else if(hour >= 19 && hour < 20){
         greetings.innerHTML = "Good Evening";
       }else if(hour >= 20 && hour < 24){
-        greetings.innerHTML = "Good Night";
+        greetings.innerHTML = "";
       }          
 
       console.log(hour);
