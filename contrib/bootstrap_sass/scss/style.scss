@@ -676,6 +676,13 @@ LOCATION
 
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
+.registration-form{
+    main{
+        h1{
+            text-align: center;
+        }
+    }
+}
 .block-page-title-block{
     margin: 15px;
 }
@@ -683,6 +690,7 @@ LOCATION
 .webform-submission-contact-form,
 .webform-submission-registration-form{
     max-width: 350px;
+    margin: 0px auto;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
