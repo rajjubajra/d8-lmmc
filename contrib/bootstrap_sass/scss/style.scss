@@ -733,8 +733,10 @@ LOCATION
         font-size: 0.9rem;
         border-radius: 0rem;
 
-        input[type=checkbox]{
-            margin-left: 0px;
+        .form-check-input {
+            position: absolute;
+            margin-top: .3rem;
+            margin-left: 0rem; 
         }
         label.checkbox{
             position: relative;
