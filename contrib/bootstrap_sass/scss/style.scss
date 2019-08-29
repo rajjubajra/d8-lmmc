@@ -677,12 +677,28 @@ LOCATION
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
 section.contact-form{
-    h1{text-align: center}  
+    h1{
+        text-align: center;
+
+        &::before{
+            content: '--- ';
+        }
+        &::after{
+            content: ' ---';
+        }
+    }  
 }
 .registration-form{
     main{
         h1{
             text-align: center;
+
+            &::before{
+                content: '--- ';
+            }
+            &::after{
+                content: ' ---';
+            }
         }
     }
 }
