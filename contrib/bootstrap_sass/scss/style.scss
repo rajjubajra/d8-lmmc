@@ -681,10 +681,10 @@ section.contact-form{
         text-align: center;
 
         &::before{
-            content: '--- ';
+            content: '- ';
         }
         &::after{
-            content: ' ---';
+            content: ' -';
         }
     }  
 }
@@ -694,10 +694,10 @@ section.contact-form{
             text-align: center;
 
             &::before{
-                content: '--- ';
+                content: '- ';
             }
             &::after{
-                content: ' ---';
+                content: ' -';
             }
         }
     }
