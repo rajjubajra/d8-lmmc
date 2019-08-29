@@ -671,6 +671,20 @@ LOCATION
 
 /* CONTACT FORM- STYLES
 -------------------------------------------------*/
+.contact{
+    img{
+        vertical-align: middle;
+        border-style: none;
+        max-width: 350px;
+        height: auto;
+        border: 1px solid #ccc;
+        width: 100%;
+        margin: 0px auto;
+    }
+    p{
+        line-height: 0.8rem;
+    }
+}
 
 
 
