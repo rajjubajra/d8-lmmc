@@ -605,8 +605,18 @@ LOCATION
 /* EVENT-CALENDAR FULL DISPLAY STYLES
 -------------------------------------------------*/
 
+
+
 /*
 ** SINGLE-PAGE STYLE ********/
+.bg-meditation-sidebar{
+    background-image: url('../images/buddha-nepal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .meditation,
 .buddhism,
 .aboutus{
@@ -626,6 +636,7 @@ LOCATION
         padding: 0px 35px;
     }
 }
+.registration-form,
 .contact,
 .meditation,
 .buddhism{
