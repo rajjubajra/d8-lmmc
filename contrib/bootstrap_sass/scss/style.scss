@@ -676,7 +676,9 @@ LOCATION
 
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
-.contact-form,
+section.contact-form{
+    h1{text-align: center}  
+}
 .registration-form{
     main{
         h1{
