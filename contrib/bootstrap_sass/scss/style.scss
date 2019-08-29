@@ -718,8 +718,11 @@ LOCATION
 
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
-fieldset.form-item-first-name, fieldset.form-item-last-name {
-    margin-left: -16px;
+.registration-form{
+    #edit-first-name,
+    #edit-last-name{
+        margin-left: 0px;
+    }
 }
 
 
