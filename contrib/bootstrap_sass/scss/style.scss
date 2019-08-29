@@ -732,18 +732,17 @@ LOCATION
     .form-control{
         font-size: 0.9rem;
         border-radius: 0rem;
-
-        .form-check-input {
-            position: absolute;
-            margin-top: .3rem;
-            margin-left: 0rem; 
-        }
-        label.checkbox{
-            position: relative;
-            display: block;
-            padding-left: 0.5rem;
-            margin-left: 27px;
-        }
+    }
+    .form-check-input {
+        position: absolute;
+        margin-top: .3rem;
+        margin-left: 0rem; 
+    }
+    label.checkbox{
+        position: relative;
+        display: block;
+        padding-left: 0.5rem;
+        margin-left: 27px;
     }
     .captcha {
         width: 225px;
