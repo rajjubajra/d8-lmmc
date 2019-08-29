@@ -718,8 +718,46 @@ LOCATION
 
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
+.block-page-title-block{
+    margin: 15px;
+}
 .webform-submission-registration-form{
     max-width: 350px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    label{
+        margin-bottom: 0rem;
+    }
+    .form-control{
+        font-size: 0.9rem;
+        border-radius: 0rem;
+
+        input[type="checkbox"]{
+            margin-left: 10px;
+        }
+        label.checkbox{
+            position: relative;
+            display: block;
+            padding-left: 0.5rem;
+            margin-left: 27px;
+        }
+    }
+    .captcha {
+        width: 225px;
+        margin: 0px auto;
+        margin-top: 30px;
+        label::after{
+            content: '';
+            margin: 0px;
+        }
+    }
+    button{
+        cursor: pointer;
+        width: 100%;
+        border-radius: 1px;
+    }
+
 } 
 
 
