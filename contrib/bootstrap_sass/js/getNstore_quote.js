@@ -32,7 +32,7 @@ let db_suttas = localStorage.getItem('Suttas')
 const rootUrl = window.location.href;
 const suturl = `${rootUrl}/jsonapi/node/motivation_suttas`;
 
-
+console.log('suturl', suturl);
 
  var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function() {
