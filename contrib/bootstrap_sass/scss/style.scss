@@ -613,8 +613,13 @@ LOCATION
     .text-content{
         padding: 0px 30px;
         border-left: 1px solid #ff7c07;
+    } 
+    
+    main{
+        border-right: 1px solid #ccc;
     }
 }
+
 
 /*
 ** DONTATION LIST PAGE ********/
@@ -713,71 +718,10 @@ LOCATION
 
 /* REGISTRATION FORM- STYLES
 -------------------------------------------------*/
-
-.registration-form{
-
-    label{
-        margin-bottom: 0px;
-    }
-
-    form{
-        max-width: 400px;
-        margin: 0px auto;
-
-        input, textarea, button{
-            border-radius: 0px;
-            max-width: 340px;
-        }
-    }
-
-    h1.title{
-        margin: 50px 0px;
-        text-align: center;
-    }
-
-    h2.webform-section-title{
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        margin-left: 30px;
-        margin-bottom: 10px;
-    }
-    
-    #edit-first-name, 
-    #edit-last-name, 
-    #edit-notes{
-        margin-left: 16px;
-    }
-    button{
-        margin-left: 16px;
-        margin-top: 30px;
-    }
-
-    .view-content{
-        margin: 0px auto;
-        max-width: 250px;
-        text-align: justify;
-    }
-   
-    
+fieldset.form-item-first-name, fieldset.form-item-last-name {
+    margin-left: -16px;
 }
 
-fieldset.form-item-first-name,
-fieldset.form-item-last-name
- {
-    margin-left: 0px;
-    label{
-        margin-left: 15px;
-    }
-}
-.form-item-subscribe input {
-    margin-left: 30px;
-}
-.form-item-subscribe {
-    margin-left: 16px;
-}
-.form-item-subscribe input {
-    margin-left: 13px;
-}
 
 
 
