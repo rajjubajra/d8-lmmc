@@ -47,31 +47,6 @@
     </div>
 
 
-  {# TODO LIST
-<div  class="todo-block hide">
-  <div class="header">
-        <div class="clear"><i class="fas fa-sync-alt"></i></div>    
-        <div id="date" class="date"></div>
-        <div id="hide-note"><i class="fas fa-angle-down"></i></div>   
-  </div>
-  <div class="container">    
-      <div class="content">
-        <ul id="list">
-          <!-- <li class="item">
-            <i class="far fa-circle"></i>
-            <i class="text">drink tea</i>
-            <i class="far fa-trash-alt" job="delete"></i>
-          </li> -->
-        </ul>
-      </div>
-  </div>
-  <div class="add-to-do">
-      <i class="fa fa-plus-circle"></i>
-      <input type="text" id="input" placeholder="add to do" >
-  </div>
-</div>
-  #}
-
 
 {# FEATURED-BOTTOM #}
     {% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
@@ -115,9 +90,6 @@
 
   {% include '@bootstrap_sass/includes/footer.html.twig' %}
 
-
-<script src="{{url('<front>')}}themes/contrib/bootstrap_sass/js/app_todo.js"></script>  
-<script src="{{url('<front>')}}themes/contrib/bootstrap_sass/js/front_page.js"></script>
 <script>
   /**
   Basic Meditation App
@@ -178,12 +150,6 @@ function countDown(e){
 
 window.addEventListener('click', countDown);
 
-/** add css class to page-wrapper for fornt-page only
-***********************
-const page_wrapper = document.querySelector('#page-wrapper');
-page_wrapper.style.display = 'flex';
-page_wrapper.style.width = '100%';
-page_wrapper.style.height = '100vh';
 
 /** linear-background for buddha statue
 **********************************/
@@ -192,22 +158,9 @@ canvas_maine.style.background = 'linear-gradient(to right, transparent,transpare
 
 
 
-
-
-
 //console.log(ui_promo_block);
 //json URI
 const uri_jsonapi_promo = `${window.location.href}jsonapi/block_content/front_page_boxes`;
-
-
-let h = new Headers();
-h.append('Accept', 'application/vnd.api+json');
-
-let req = new Request(uri_jsonapi_promo, {
-  method: 'GET',
-  headers: h,
-  mode: 'cors'
-});
 
 /* run function view_promo_block*/
 view_promo_block(uri_jsonapi_promo);
@@ -242,32 +195,7 @@ function view_promo_block(request){
   };
   xhttp.open("GET", request, true);
   xhttp.send();
-
 }
-
-
-
-
-
-
-
-
-
-
-/** 
-***** Footer style for front page only  *****
-const footer = document.querySelector("footer");
-footer.style.position = 'fixed';
-footer.style.bottom = '0px';
-footer.style.width = '100%';
-footer.style.height = '55px';
-*/
-
-
-
-
-
-
 
 
 </script>
