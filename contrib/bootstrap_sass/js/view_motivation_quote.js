@@ -29,10 +29,16 @@ function view_suttas(request){
 
 
         const arr_length = dbArr.length;
-        
+        /**
+         * to get random index id
+         * genrate randome number in between 1 to array length
+         */
+        const randIndex = Math.floor(Math.random() * arr_length);
 
-
-        ui_greetings.innerHTML = dbArr[0].attributes.field_motivation_suttas +  ' - ' + arr_length;
+        /** 
+         * to get also '0' index value - the random number with 1
+         */
+        ui_greetings.innerHTML = dbArr[randIndx - 1].attributes.field_motivation_suttas +  ' - ' + arr_length;
 
 
       }
