@@ -1,3 +1,4 @@
+console.log('VIEW DHAMMAPADA');
 /**
  * DISPLAY RANDOM Dhammapada IN TO THE FRONT PAGE
  * FROM CONTENT TYPE "Dhammapada"  
