@@ -7,7 +7,7 @@
 const ui_greetings = document.getElementById('greetings');
 
 //get motivation suttas
-const uri_suttas = `${window.location.href}/jsonapi/node/motivation_suttas`;
+const uri_suttas = `${window.location.href}jsonapi/node/motivation_suttas`;
 //console.log(' Sutta uri ',uri_suttas);
 /** 
 *  run to view suttas */
@@ -23,9 +23,9 @@ function view_suttas(request){
         //console.log('xhttp req', xhttp.responseText);
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
-        //console.log(dbArr);
-        //console.log(dbArr[0].attributes.title);
-        //console.log(dbArr[0].attributes.field_motivation_suttas);
+        console.log('SUTTA ARR ',dbArr);
+        console.log('SUTTA TITLE ',dbArr[0].attributes.title);
+        console.log('SUTTA FIELD ',dbArr[0].attributes.field_motivation_suttas);
 
 
         const arr_length = dbArr.length;
