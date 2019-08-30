@@ -1,3 +1,11 @@
+/**
+ * DISPLAY RANDOM MOTIVATION SUTTAS IN TO THE FRONT PAGE
+ * FROM CONTENT TYPE "Motivation Suttas" 
+ */
+
+//get UI for the Suttas to display
+const ui_greetings = document.getElementById('greetings');
+
 //get motivation suttas
 const uri_suttas = `${window.location.href}/jsonapi/node/motivation_suttas`;
 console.log(' Sutta uri ',uri_suttas);
@@ -18,6 +26,12 @@ function view_suttas(request){
         console.log(dbArr);
         console.log(dbArr[0].attributes.title);
         console.log(dbArr[0].attributes.field_motivation_suttas);
+
+
+
+        ui_greetings.innerHTML = dbArr[0].attributes.field_motivation_suttas;
+
+
       }
   };
   xhttp.open("GET", request, true);
