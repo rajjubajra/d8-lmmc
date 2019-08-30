@@ -38,7 +38,7 @@ function view_suttas(request){
         /** 
          * to get also '0' index value minus the random number with 1
          */
-        let i = randIndex - 1; 
+        let i = randIndex; 
         ui_greetings.innerHTML = dbArr[i].attributes.field_motivation_suttas +  ' - ' + i;
       }
   };
