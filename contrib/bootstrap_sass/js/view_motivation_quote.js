@@ -1,9 +1,12 @@
 //get motivation suttas
 const uri_suttas = `${window.location.href}/jsonapi/node/motivation_suttas`;
 console.log(' Sutta uri ',uri_suttas);
+/** 
+*  run to view suttas */
+
+view_suttas(uri_suttas);
 
 function view_suttas(request){
-
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -18,7 +21,4 @@ function view_suttas(request){
   };
   xhttp.open("GET", request, true);
   xhttp.send();
-
-
-
 }
