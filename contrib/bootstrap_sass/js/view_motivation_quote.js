@@ -33,14 +33,13 @@ function view_suttas(request){
          * to get random index id
          * genrate randome number in between 1 to array length
          */
-        const randIndex = Math.floor(Math.random() * arr_length);
+        let randIndex = Math.floor(Math.random() * arr_length);
 
         /** 
-         * to get also '0' index value - the random number with 1
+         * to get also '0' index value minus the random number with 1
          */
-        ui_greetings.innerHTML = dbArr[randIndx - 1].attributes.field_motivation_suttas +  ' - ' + arr_length;
-
-
+        let i = randIndex - 1; 
+        ui_greetings.innerHTML = dbArr[i].attributes.field_motivation_suttas +  ' - ' + arr_length;
       }
   };
   xhttp.open("GET", request, true);
