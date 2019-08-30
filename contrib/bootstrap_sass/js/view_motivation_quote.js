@@ -31,15 +31,10 @@ function view_suttas(request){
         const arr_length = dbArr.length;
         /**
          * to get random index id
-         * genrate randome number in between 1 to array length
+         * genrate randome number in between the array length
          */
-        let randIndex = Math.floor(Math.random() * arr_length);
-
-        /** 
-         * to get also '0' index value minus the random number with 1
-         */
-        let i = randIndex; 
-        ui_greetings.innerHTML = dbArr[i].attributes.field_motivation_suttas +  ' - ' + i;
+        let i = Math.floor(Math.random() * arr_length);
+        ui_greetings.innerHTML = dbArr[i].attributes.field_motivation_suttas;
       }
   };
   xhttp.open("GET", request, true);
