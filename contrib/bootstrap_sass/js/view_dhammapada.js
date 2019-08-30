@@ -13,9 +13,9 @@ console.log(' DHAMMAPADA uri ',uri_dhammapada);
 /** 
 *  run to view suttas */
 
-view_suttas(uri_dhammapada);
+view_dhammapda(uri_dhammapada);
 
-function view_suttas(request){
+function view_dhammapda(request){
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
