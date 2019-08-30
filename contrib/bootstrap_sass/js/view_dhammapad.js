@@ -5,7 +5,7 @@
 
 //get UI for the Suttas to display
 const ui_dhammapada = document.getElementById('dhammapada');
-
+console.log('UI DHAMMAPADA ',ui_dhammapada);
 //get motivation suttas
 const uri_dhammapada = `${window.location.href}/jsonapi/node/dhammapada`;
 console.log(' Sutta uri ',uri_dhammapada);
@@ -24,8 +24,8 @@ function view_suttas(request){
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
         console.log(dbArr);
-        //console.log(dbArr[0].attributes.title);
-        //console.log(dbArr[0].attributes.field_dhammapada);
+        console.log(dbArr[0].attributes.title);
+        console.log(dbArr[0].attributes.field_dhammapada);
 
         const arr_length = dbArr.length;
         /**
