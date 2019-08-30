@@ -197,10 +197,12 @@ li.nav-item{
 -------------------------------------------------*/
 
 .bg-buddha-statue{
+    background: linear-gradient(to right, transparent,transparent,transparent, #ffffff)';
     background-image: url('../images/buddha-statue.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right bottom;
+    
 }
 
 ul.time, ul#time {
