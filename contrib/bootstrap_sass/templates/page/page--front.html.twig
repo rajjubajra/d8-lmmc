@@ -86,21 +86,24 @@
 
   
 {# FOOTER #}  
+{% include '@bootstrap_sass/includes/footer.html.twig' %}
 
 
-  {% include '@bootstrap_sass/includes/footer.html.twig' %}
+
+
+
 
 <script>
   /**
   Basic Meditation App
   */
-console.log('url',window.location);
+//console.log('url',window.location);
 let windowInnerWith = window.innerWidth;
-console.log(windowInnerWith);
+//console.log(windowInnerWith);
 
 document.getElementById('myVideo').style.width = windowInnerWith;
 
-    function fancyTimeFormat(time)
+function fancyTimeFormat(time)
     {   
         // Hours, minutes and seconds
         var hrs = ~~(time / 3600);
@@ -118,7 +121,6 @@ document.getElementById('myVideo').style.width = windowInnerWith;
         ret += "" + secs;
         return ret;
     }  
-
 
 function countDown(e){
  
@@ -147,16 +149,12 @@ function countDown(e){
       bell_start.play();
 }
 
-
 window.addEventListener('click', countDown);
-
 
 /** linear-background for buddha statue
 **********************************/
 const canvas_maine = document.querySelector('.dialog-off-canvas-main-canvas');
 canvas_maine.style.background = 'linear-gradient(to right, transparent,transparent,transparent, #ffffff)';  
-
-
 
 //console.log(ui_promo_block);
 //json URI
@@ -166,7 +164,6 @@ const uri_jsonapi_promo = `${window.location.href}jsonapi/block_content/front_pa
 view_promo_block(uri_jsonapi_promo);
 
 function view_promo_block(request){
-
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -174,8 +171,8 @@ function view_promo_block(request){
         //console.log('xhttp req', xhttp.responseText);
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
-        console.log(dbArr);
-        console.log(dbArr[0].attributes.body);
+       // console.log(dbArr);
+       // console.log(dbArr[0].attributes.body);
 
         let output = ``; 
         dbArr.map((item, index)=>{
@@ -196,7 +193,6 @@ function view_promo_block(request){
   xhttp.open("GET", request, true);
   xhttp.send();
 }
-
 
 </script>
 
