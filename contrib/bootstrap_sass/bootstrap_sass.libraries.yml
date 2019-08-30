@@ -4,11 +4,8 @@ global-styling:
     js/popper.min.js: {}
     js/bootstrap.min.js: {}
     js/global.js: {}
-    js/getNstore_quote.js: {}
-    js/getNstore_dhammapada.js: {}
-    js/app_todo.js: {}
-    js/front_page.js: {}
-    
+    js/view_motivation_quote.js: {}
+  
   
   css:
     component:
