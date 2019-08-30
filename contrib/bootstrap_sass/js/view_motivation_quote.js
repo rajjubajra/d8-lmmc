@@ -16,7 +16,8 @@ function view_suttas(request){
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
         console.log(dbArr);
-        console.log(dbArr[0].attributes.body);
+        console.log(dbArr[0].attributes.title);
+        console.log(dbArr[0].attributes.field_motivation_suttas);
       }
   };
   xhttp.open("GET", request, true);
