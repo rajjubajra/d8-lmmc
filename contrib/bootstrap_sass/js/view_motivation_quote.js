@@ -28,8 +28,11 @@ function view_suttas(request){
         console.log(dbArr[0].attributes.field_motivation_suttas);
 
 
+        const arr_length = dbArr.length;
+        
 
-        ui_greetings.innerHTML = dbArr[0].attributes.field_motivation_suttas;
+
+        ui_greetings.innerHTML = dbArr[0].attributes.field_motivation_suttas +  ' - ' + arr_length;
 
 
       }
