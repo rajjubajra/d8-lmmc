@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Bootstrap 4 Sass
 Description: Bootstrap 4 with Sass
 */
@@ -81,7 +81,7 @@ a{
     @media (min-aspect-ratio: 16/9){
         #myVideo {
             width: 100%;
-            height: auto; 
+            height: auto;
             }
         }
     @media(max-aspecct-ratio: 16/9){
@@ -125,6 +125,11 @@ header{
 /* NAVBAR STYLES
 -------------------------------------------------*/
 
+.dropdown-menu{
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px;
+}
+
 .navbar{
     background-color: #ffffff;
     padding: 0rem 1rem;
@@ -140,15 +145,15 @@ header{
 
 .navbar-dark .navbar-nav .nav-link {
     color: #000;
-    
+
 }
 .navbar-dark .navbar-nav .active >
-.nav-link, 
+.nav-link,
 .navbar-dark .navbar-nav .nav-link.active
 {
     color: #000;
     border-bottom: 1px solid #000;
-    
+
 }
 li.nav-item{
     a:hover{
@@ -238,7 +243,7 @@ section.row.region.region-website-name {
             padding: 0px 13px;
             background-color: #ff7c07;
 
-            .fas, 
+            .fas,
             .far{
                 font-size: 1.2rem;
                 padding: 4px 0px;
@@ -252,7 +257,7 @@ section.row.region.region-website-name {
                 text-align: center;
             }
         }
-        
+
         .content{
             width: 100%;
             height: 236px;
@@ -277,7 +282,7 @@ section.row.region.region-website-name {
                     top: -4px;
                 }
                 .lineThrough{
-                    text-decoration: line-through;    
+                    text-decoration: line-through;
                 }
                 .fa-check-circle, .lineThrough{
                     color: green;
@@ -314,7 +319,7 @@ section.row.region.region-website-name {
         nav{    /* color for LANDING PAGE ONLY */
                 .navbar-dark .navbar-nav .nav-link {color: #fff !important;}
                 .navbar-dark .navbar-nav .active >
-                .nav-link, 
+                .nav-link,
                 .navbar-dark .navbar-nav .nav-link.active
                 {   color: #fff !important; border-bottom: 1px solid #fff !important;}
                 li.nav-item{
@@ -332,7 +337,7 @@ section.row.region.region-website-name {
     align-items: center;
     position: absolute;
     top: 0;
-    
+
 
     .items{
         width: 100%;
@@ -340,7 +345,7 @@ section.row.region.region-website-name {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    
+
         h1{
             text-align: center;
             span{text-shadow: 1px 1px 1px #333;}
@@ -406,7 +411,7 @@ section.row.region.region-website-name {
         .stop{
             font-size: 2.5rem;
             color: #f5f5f5;
-        }   
+        }
     }
 }
 
@@ -443,8 +448,8 @@ section.row.region.region-website-name {
         }
     }
 
-    
-    
+
+
 }
 
 section.front-2{
@@ -530,8 +535,8 @@ section.front-2{
         height: auto;
     }
 
-   
-    
+
+
 }
 
 
@@ -558,7 +563,7 @@ section.front-2{
 
 
 /*
-LOCATION 
+LOCATION
 *************************************************/
 .location-page{
     img{
@@ -605,7 +610,7 @@ LOCATION
             font-weight: 100;
             letter-spacing: 2px;
         }
-        
+
     }
 }
 
@@ -633,13 +638,13 @@ LOCATION
 .buddhism,
 .aboutus{
     img{
-        width: 100%; 
+        width: 100%;
         height: auto;
     }
     .text-content{
         padding: 0px 30px;
         border-left: 1px solid #ff7c07;
-    } 
+    }
 }
 
 .aboutus{
@@ -737,7 +742,7 @@ section.contact-form{
         &::after{
             content: ' -';
         }
-    }  
+    }
 }
 .registration-form{
     main{
@@ -774,7 +779,7 @@ section.contact-form{
     .form-check-input {
         position: absolute;
         margin-top: .3rem;
-        margin-left: 0rem; 
+        margin-left: 0rem;
     }
     label.checkbox{
         position: relative;
@@ -797,7 +802,7 @@ section.contact-form{
         border-radius: 1px;
     }
 
-} 
+}
 .webform-submission-contact-form .captcha, .webform-submission-registration-form .captcha {
     width: 100%;
     margin: 0 auto;
@@ -813,7 +818,7 @@ section.contact-form{
 
 
 /**
-Node Page - Full Page 
+Node Page - Full Page
 ***************************************************/
 article.node.node--type-event-calendar{
 
@@ -881,7 +886,7 @@ article.node.node--type-event-calendar{
             }
         }
     }
-    
+
 
     .field--name-field-event-schedule{
         margin: 50px 0px;
@@ -915,7 +920,7 @@ article.node.node--type-event-calendar{
 
 
 
-/* COLORS 
+/* COLORS
 --------------------------------------------------*/
 .btn-primary{
     background-color: #734303!important
@@ -961,7 +966,7 @@ a {
 
 
 
-/* FOOTER 
+/* FOOTER
 --------------------------------------------------*/
 
 
@@ -975,11 +980,11 @@ a {
             color: #eee;
         }
     }
-    
+
 }
 
 footer{
-    
+
     text-align: center;
     font-size: 0.8rem;
     width: 100%;
@@ -992,7 +997,7 @@ footer{
             }
         }
     }
-    
+
     ul.navbar-nav{
         display: flex;
         flex-direction: row !important;
@@ -1012,7 +1017,7 @@ footer{
         position: relative;
         top: 0px;
     }
-    
+
     .site-footer__bottom{
         display: flex;
         justify-content: center;
