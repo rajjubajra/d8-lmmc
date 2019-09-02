@@ -36,8 +36,32 @@
 
 
 /**
- * dropdown toggle show and null
+ * dropdown toggle show
  */
+const _navItem = document.querySelectorAll(".menu-item--expanded");
+//console.log(_navItem);
+//NodeList to array
+const _navItemArr = Array.from(_navItem);
+//console.log(_navItemArr);
+
+
+_navItemArr.forEach(function(item){
+  item.addEventListener('mouseover', function(){
+    item.lastElementChild.classList.add("show");
+  })
+})
+_navItemArr.forEach(function(item){
+  item.addEventListener('mouseleave', function(){
+    item.lastElementChild.classList.remove("show");
+  })
+})
+
+
+
+
+/**
+ * dropdown toggle show and null
+
 const _navItem = document.querySelectorAll(".menu-item--expanded");
 //console.log(_navItem[0].lastElementChild);
 
@@ -51,3 +75,4 @@ for(let i = 0; i <= _navItem.length; i++){
     _navItem[i].lastElementChild.classList.remove("show");
   });
 }
+*/
