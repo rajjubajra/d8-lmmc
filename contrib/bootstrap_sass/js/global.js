@@ -39,15 +39,15 @@
  * dropdown toggle show and null
  */
 const _navItem = document.querySelectorAll(".menu-item--expanded");
-console.log(_navItem[0].lastElementChild);
+//console.log(_navItem[0].lastElementChild);
 
 for(let i = 0; i <= _navItem.length; i++){
   _navItem[i].addEventListener('mouseover', function(){
-    console.log("mouse over", _navItem[i].classList);
+    //console.log("mouse over", _navItem[i].classList);
     _navItem[i].lastElementChild.classList.add("show");
   });
   _navItem[i].addEventListener("mouseleave", function(){
-    console.log("mosue leave", _navItem[i].classList);
+    //console.log("mosue leave", _navItem[i].classList);
     _navItem[i].lastElementChild.classList.remove("show");
   });
 }
