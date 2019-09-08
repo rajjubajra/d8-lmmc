@@ -125,10 +125,13 @@ header{
 /* NAVBAR STYLES
 -------------------------------------------------*/
 
-.dropdown-menu{
+ul.dropdown-menu{
     margin: 0px 0px 0px 0px;
     border-radius: 0px;
+    position: absolute;
+    top: 90%;
 }
+
 
 .navbar{
     background-color: #ffffff;
