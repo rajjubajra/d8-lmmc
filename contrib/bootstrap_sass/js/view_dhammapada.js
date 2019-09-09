@@ -24,9 +24,9 @@ function view_dhammapda(request){
         //console.log('xhttp req', xhttp.responseText);
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
-        console.log(dbArr);
-        console.log(dbArr[0].attributes.title);
-        console.log(dbArr[0].attributes.field_dhammapada.value);
+       // console.log(dbArr);
+       // console.log(dbArr[0].attributes.title);
+       // console.log(dbArr[0].attributes.field_dhammapada.value);
 
         const arr_length = dbArr.length;
         /**
@@ -34,6 +34,7 @@ function view_dhammapda(request){
          * genrate randome number in between the array length
          */
         let i = Math.floor(Math.random() * arr_length);
+
         ui_dhammapada.innerHTML = dbArr[i].attributes.field_dhammapada.value;
       }
   };

@@ -23,9 +23,9 @@ function view_suttas(request){
         //console.log('xhttp req', xhttp.responseText);
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
-        console.log('SUTTA ARR ',dbArr);
-        console.log('SUTTA TITLE ',dbArr[0].attributes.title);
-        console.log('SUTTA FIELD ',dbArr[0].attributes.field_motivation_suttas);
+      //  console.log('SUTTA ARR ',dbArr);
+      //  console.log('SUTTA TITLE ',dbArr[0].attributes.title);
+      //  console.log('SUTTA FIELD ',dbArr[0].attributes.field_motivation_suttas);
 
 
         const arr_length = dbArr.length;
