@@ -124,7 +124,6 @@ header{
 
 /* NAVBAR STYLES
 -------------------------------------------------*/
-   
 ul.dropdown-menu{
     margin: 0px 0px 0px 0px;
     border-radius: 0px;
@@ -133,6 +132,13 @@ ul.dropdown-menu{
     border-radius: 0px;
     border: 0px;
     border-bottom: 1px solid #d7ac03;
+    li{
+        a{
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 
