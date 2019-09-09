@@ -17,6 +17,7 @@
 {# MAIN #}      
     <div class="container-fluid">
       <div class="row">
+        <div class="col-md-12">
         <div class="front-page bg-buddha-statue">
         
           <div class="items">
@@ -24,8 +25,6 @@
           <ul id="time" class="time"></ul>
               
             <h1><span id="greetings" class="greetings">Welcome</span></h1>
-
-          
           
             <div id="progress-bar">
                   <ul class="medi-time">
@@ -40,9 +39,8 @@
             
           </div>
 
-        
-          
         </div>  
+        </div>
       </div>
     </div>
 
@@ -53,31 +51,33 @@
 
 </div>
 
-
-<div class="website-name">
-  {{ page.website_name }}
-</div>
-  
-<section class="front-2">
-  
-    <div class="buddha-bachana">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-             <p id="dhammapada" >Dhammapada</p>
-          </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="website-name">
+      {{ page.website_name }}
       </div>
-     
-    </div> 
+    </div>
+  </div>
+</div>
 
-    <!-- PROMO BOX -->
-    
-    <div id="promo-block"></div>
-    
-    
-</section>
+<div class="container">
+    <div class="row">  
+        <div class="col-md-12">
+            <section class="front-2">
+                <div class="buddha-bachana">      
+                  <p id="dhammapada" >Dhammapada</p>
+                </div>
+            </section>
+        </div>
+    </div>
 
+    <div class="row">
+      <!-- PROMO BOX -->
+      <div id="promo-block"></div>
+    </div>
+
+</div> 
 
 
 
