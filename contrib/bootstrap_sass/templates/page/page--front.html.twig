@@ -196,21 +196,22 @@ function view_promo_block(request){
 
 
 
-//myVideo dynamic grayscal every two hours time
-const _myVedeo = document.querySelector('#myVideo');
-const _buddhaStatue = document.querySelector('.bg-buddha-statue');
-
+/** myVideo dynamic grayscal every two hours time  */
+const _myVedeo = document.querySelector('#myVideo'); // ui video
+const _buddhaStatue = document.querySelector('.bg-buddha-statue'); // ui image
 const _date = new Date();
-
-let _hour = _date.getHours();
-
-console.log(_hour, '-', _myVedeo);
-
+let _hour = _date.getHours(); //get Hour
+//console.log(_hour, '-', _myVedeo);
 if( _hour < 6 || _hour > 19 ){
   _myVedeo.style.filter = 'grayscale(100%)';
   _buddhaStatue.style.filter = 'grayscale(100%)';
 }
 
+
+/** SCROLL-TOP BUTTON VIEW on scroll up **/
+document.addEventListener('scoll', function(){
+  console.log(window.pageXOffset, '-- ', window.pageXOffset);
+})
 
 
 </script>
