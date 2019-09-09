@@ -133,6 +133,9 @@ ul.dropdown-menu{
     border: 0px;
     border-bottom: 1px solid #d7ac03;
     li{
+        &:hover{
+            border: 0px;
+        }
         a{
             &:hover{
                 text-decoration: none;
