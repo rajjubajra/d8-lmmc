@@ -499,11 +499,17 @@ section.front-2{
         box-shadow: 1px 1px 8px #ccc;
         p#dhammapada p{
             &::before{
-                content: open-quote;
+                
                 background-image: url('../images/dhammachakra.png');
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
+                width: 100px;
+                height: 100px;
+                display: inherit;
+                float: left;
+                margin-right: 15px;
+                content: open-quote;
             }
             &::after{
                 content: close-quote " - The Buddha";
