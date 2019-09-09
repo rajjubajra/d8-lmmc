@@ -4,12 +4,12 @@ console.log('VIEW DHAMMAPADA');
  * FROM CONTENT TYPE "Dhammapada"  
  */
 
-//get UI for the Suttas to display
+/** get UI for the Suttas to display */
 const ui_dhammapada = document.getElementById('dhammapada');
-console.log('UI DHAMMAPADA ',ui_dhammapada);
-//get motivation suttas
+//console.log('UI DHAMMAPADA ',ui_dhammapada);
+/** get motivation suttas */
 const uri_dhammapada = `${window.location.href}jsonapi/node/dhammapada`;
-console.log(' DHAMMAPADA uri ',uri_dhammapada);
+//console.log(' DHAMMAPADA uri ',uri_dhammapada);
 /** 
 *  run to view suttas */
 

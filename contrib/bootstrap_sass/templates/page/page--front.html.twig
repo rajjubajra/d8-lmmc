@@ -205,6 +205,10 @@ let _hour = _date.getHours();
 
 console.log(_hour, '-', _myVedeo);
 
+if(_hour > 18 && _hour < 6 ){
+  _myVedeo.style.filter = 'grayscale(100%)';
+}
+
 
 
 </script>
