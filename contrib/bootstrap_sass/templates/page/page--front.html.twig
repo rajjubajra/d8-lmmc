@@ -219,8 +219,11 @@ remove header drop-shadow on frontpage only
 **/
 const _header = document.querySelector('header#header');
 _header.style.boxShadow = '0px 0px 0px 0px #ccc';
-const _dropdownMenu = document.querySelector('ul.dropdown-menu');
-_dropdownMenu.style.boxShadow = '0px 0px 0px 0px #ccc'; 
+const _dropdownMenu = document.querySelectorAll('ul.dropdown-menu');
+for(let i = 0; i <= _dropdownMenu.length; i++){
+  _dropdownMenu[i].style.boxShadow = '0px 0px 0px 0px #ccc'; 
+}
+
 
 
 </script>
