@@ -210,8 +210,19 @@ if( _hour < 6 || _hour > 19 ){
 
 /** SCROLL-TOP BUTTON VIEW on scroll up **/
 window.addEventListener('scroll', function(e){
-  let last_position = window.scrollY;
+
+  let _scrollPosition = window.scrollY;
   console.log(last_position, 'evetn', e);
+
+  sessionStorage.setItem('lastPosition',last_position);
+
+  let _lastPosition = sessionStorage.getItem('lastPosition');
+
+  console.log(_lastPosition);
+
+  if(_scrollPosition < _lastPosition){
+    console.log("scrolling up....");
+  }
 
 
 })
