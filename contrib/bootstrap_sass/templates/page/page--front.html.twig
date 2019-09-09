@@ -169,7 +169,7 @@ function view_promo_block(request){
 
         let output = ``; 
         dbArr.map((item, index)=>{
-          return output += `<div class="col-md-4">
+          return output += `<div class="col-md-4 col-sm-6 col-xs-12">
               <div class="promo-boxes">
                 <h1>${item.attributes.info}</h1>
                 <p> ${item.attributes.body.value} </p>
