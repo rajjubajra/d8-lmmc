@@ -480,10 +480,6 @@ section.front-2{
     padding: 50px 0px;
 
     .buddha-bachana{
-        background-image: url('../images/dhammachakra.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         max-width: 1200px;
         min-height: 200px;
         margin: 0px auto;
@@ -504,6 +500,10 @@ section.front-2{
         p#dhammapada p{
             &::before{
                 content: open-quote;
+                background-image: url('../images/dhammachakra.png');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
             }
             &::after{
                 content: close-quote " - The Buddha";
