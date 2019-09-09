@@ -209,23 +209,20 @@ if( _hour < 6 || _hour > 19 ){
 
 
 /** SCROLL-TOP BUTTON VIEW on scroll up **/
-window.addEventListener('scroll', function(e){
-
-  let _scrollPosition = window.scrollY;
-  console.log(_scrollPosition, 'evetn', e);
-
-  sessionStorage.setItem('lastPosition',_scrollPosition);
-
-  let _lastPosition = sessionStorage.getItem('lastPosition');
-
-  console.log(_lastPosition);
-
-  if(_scrollPosition < _lastPosition){
-    console.log("scrolling up....");
-  }
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+	console.log('scollring up....');
+	else
+	console.log('scrolling down...');
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
 
 
-})
+
 
 
 
