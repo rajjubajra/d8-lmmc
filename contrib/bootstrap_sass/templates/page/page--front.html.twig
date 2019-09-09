@@ -212,9 +212,9 @@ if( _hour < 6 || _hour > 19 ){
 window.addEventListener('scroll', function(e){
 
   let _scrollPosition = window.scrollY;
-  console.log(last_position, 'evetn', e);
+  console.log(_scrollPosition, 'evetn', e);
 
-  sessionStorage.setItem('lastPosition',last_position);
+  sessionStorage.setItem('lastPosition',_scrollPosition);
 
   let _lastPosition = sessionStorage.getItem('lastPosition');
 
