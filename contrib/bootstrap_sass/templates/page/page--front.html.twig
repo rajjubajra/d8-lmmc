@@ -194,5 +194,18 @@ function view_promo_block(request){
   xhttp.send();
 }
 
+
+
+//myVideo dynamic grayscal every two hours time
+const _myVedeo = document.querySelector('#myVideo');
+
+const _date = new Date();
+
+let _hour = _date.getHours();
+
+console.log(_hour, '-', _myVedeo);
+
+
+
 </script>
 
