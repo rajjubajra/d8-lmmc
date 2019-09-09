@@ -66,10 +66,9 @@
         </div>
     </div>
 
-    <div class="row">
-      <!-- PROMO BOX -->
-      <div id="promo-block"></div>
-    </div>
+    <!-- PROMO BOX [ jsonapi data ] -->
+    <div id="promo-block" class="row"></div>
+
 
 </div> 
 
@@ -178,10 +177,8 @@ function view_promo_block(request){
             </div>`
         });
 
-        document.getElementById("promo-block").innerHTML = 
-        `<div class="container">
-          <div class="row">${output}</div>
-        </div>`;
+        document.getElementById("promo-block").innerHTML = output;
+
       }
   };
   xhttp.open("GET", request, true);
