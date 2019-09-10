@@ -499,7 +499,7 @@ section.front-2{
         box-shadow: 1px 1px 8px #ccc;
         p#dhammapada p{
             &::before{
-                
+                contain: '';
                 background-image: url('../images/dhammachakra.png');
                 background-position: center;
                 background-size: contain;
