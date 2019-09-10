@@ -680,7 +680,7 @@ LOCATION
 .registration-form,
 .contact,
 .meditation,
-.buddhism{
+{
     main{
         border-left: 1px solid #ccc;
         padding: 0px 35px;
@@ -688,11 +688,18 @@ LOCATION
 }
 
 .buddhism-page-contains{
+
+    h2{
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+    }
     
     img{
         float: left;
-        padding: 20px 20px 20px 0px;
-        max-width: 250px;
+        padding: 5px 20px 20px 0;
+        max-width: 450px;
         width: 100%;
         height: auto;
     }
