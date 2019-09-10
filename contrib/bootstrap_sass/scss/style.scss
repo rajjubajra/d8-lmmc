@@ -650,11 +650,12 @@ LOCATION
 
 /* EVENT-CALENDAR FULL DISPLAY STYLES
 -------------------------------------------------*/
-.field--name-field-event-image{
+.field.field--name-field-event-image.field--type-image.field--label-above{
     img{
         width: 100%;
         height: auto;
     }
+    
 }
 
 
