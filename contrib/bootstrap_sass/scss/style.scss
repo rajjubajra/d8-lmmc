@@ -687,7 +687,7 @@ LOCATION
     }
 }
 
-.buddhism-page-contains{
+.buddhism-page{
 
     h2{
         text-transform: uppercase;
@@ -695,15 +695,18 @@ LOCATION
         letter-spacing: 2px;
         margin-bottom: 40px;
     }
-    
-    img{
-        float: left;
-        padding: 5px 20px 20px 0;
-        max-width: 450px;
-        width: 100%;
-        height: auto;
+
+    .buddhism-page-contains{
+        img{
+            float: left;
+            padding: 5px 20px 20px 0;
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+        }
     }
 }
+
 
 
 /*
