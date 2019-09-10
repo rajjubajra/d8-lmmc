@@ -509,10 +509,9 @@ section.front-2{
                 display: inherit;
                 float: left;
                 margin-right: 15px;
-                content: open-quote;
             }
             &::after{
-                content: close-quote " - The Buddha";
+                content: " - The Buddha";
             }
         }
         i.dhamma-chakra{
@@ -685,6 +684,15 @@ LOCATION
     main{
         border-left: 1px solid #ccc;
         padding: 0px 35px;
+    }
+}
+
+.budhism-page-contain{
+    display: flex;
+    img{
+        max-width: 250px;
+        width: 100%;
+        height: auto;
     }
 }
 
