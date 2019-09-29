@@ -223,7 +223,6 @@ li.nav-item{
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right bottom;
-    z-index: -1;
 }
 
 ul.time, ul#time {
@@ -354,7 +353,7 @@ section.row.region.region-website-name {
 
 .front-page{
     width: 98%;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
