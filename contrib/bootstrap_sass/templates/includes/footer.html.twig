@@ -1,59 +1,58 @@
- 
 <section class="footer-1">
   <div class="container-fluid">
-      <footer class="pt-4 my-md-5 pt-md-5 border-top">
-          <div class="row">
-            <div class="col-12 col-md">
-              
-              <img class="mb-2 mt-3" src="{{ logopath }}" alt="" width="50" height="50">
-              <small class="d-block mb-3 text-muted">
-                  All Right reserved &copy; {{ "now"|date('Y') }} 
-              </small>
-            </div>
-            <div class="col-6 col-md">
-                {{ page.footer_first }}
-            </div>
-            <div class="col-6 col-md">
-              {{ page.footer_second }}  
-            </div>
-            <div class="col-6 col-md">
-              {{ page.footer_third }}
-            </div>
-            <div class="col-6 col-md">
-              {{ page.footer_fourth }}
-            </div>
-          </div>
-        </footer>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+
+          <img class="mb-2 mt-3" src="{{ logopath }}" alt="" width="50" height="50">
+          <small class="d-block mb-3 text-muted">
+            All Right reserved &copy; {{ "now"|date('Y') }}
+          </small>
+        </div>
+        <div class="col-6 col-md">
+          {{ page.footer_first }}
+        </div>
+        <div class="col-6 col-md">
+          {{ page.footer_second }}
+        </div>
+        <div class="col-6 col-md">
+          {{ page.footer_third }}
+        </div>
+        <div class="col-6 col-md">
+          {{ page.footer_fourth }}
+        </div>
+      </div>
+    </footer>
   </div>
 
 </section>
 
 <footer class="site-footer">
-    {% block footer %}
-      <div class="{{ container }}">
-        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-              <div class="site-footer__bottom text-center">
-                {#
+  {% block footer %}
+  <div class="{{ container }}">
+    {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+    <div class="site-footer__bottom text-center">
+      {#
                 <div  id="todo-note-btn" class="todo-note-btn">
                 <i class="far fa-clipboard"></i>
                 Todo Note
                 </div>     
-                #}           
-                
-              </div>
-              <div class="text-center">
-                {{ page.footer_fift }}
-                <section class="developer">
-                  Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a>
-                </section>
-                
-              </div>
-              
-        {% endif %}
+                #}
 
-        {% if page.footer_fifth %}
-            {{ page.footer_fifth }}
-        {% endif %}
-      </div>
-    {% endblock %}
+    </div>
+    <div class="text-center">
+      {{ page.footer_fift }}
+      <!-- <section class="developer">
+                  Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a>
+                </section> -->
+
+    </div>
+
+    {% endif %}
+
+    {% if page.footer_fifth %}
+    {{ page.footer_fifth }}
+    {% endif %}
+  </div>
+  {% endblock %}
 </footer>
