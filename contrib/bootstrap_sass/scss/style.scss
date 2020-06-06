@@ -73,6 +73,12 @@ a{
 
 #page-wrapper{
 
+    .vimeo-bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    }
 
     #myVideo {
     position: absolute;
@@ -82,14 +88,15 @@ a{
     z-index: -2;
     filter: grayscale(40%);
     }
+    
     @media (min-aspect-ratio: 16/9){
-        #myVideo {
+        #myVideo, .vimeo-bg {
             width: 100%;
             height: auto;
             }
         }
     @media(max-aspecct-ratio: 16/9){
-        #myVideo{
+        #myVideo, .vimeo-bg{
             width: auto;
             height: 100%;
         }
