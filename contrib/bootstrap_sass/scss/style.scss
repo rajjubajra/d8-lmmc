@@ -73,6 +73,7 @@ a{
 
 #page-wrapper{
 
+    
     #myVideo {
     position: absolute;
     right: 0;
@@ -83,13 +84,13 @@ a{
     }
 
     @media (min-aspect-ratio: 16/9){
-        #myVideo, .vimeo-bg {
+        #myVideo, iframe {
             width: 100%;
             height: auto;
             }
         }
     @media(max-aspecct-ratio: 16/9){
-        #myVideo, .vimeo-bg{
+        #myVideo, iframe{
             width: auto;
             height: 100%;
         }
