@@ -124,8 +124,6 @@
 
   function countDown(e) {
 
-    //Enable wakelock on mobile device
-    noSleep.enable();
 
     let button = e.target.attributes.id.value;
     let dataTime = e.target.attributes.dataTime.value * 60;
@@ -135,7 +133,8 @@
     var bell_end = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_end.mp3");
 
     var downloadTimer = setInterval(function () {
-
+      //Enable wakelock on mobile device
+      noSleep.enable();
       document.getElementById("progress-bar").innerHTML =
         `
         <div id="timeLeft"></div>
