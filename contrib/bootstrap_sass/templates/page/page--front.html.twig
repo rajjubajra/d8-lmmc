@@ -1,17 +1,10 @@
 <div id="page-wrapper">
 
   <!-- The video  -->
-  {# <video autoplay controls="true" muted loop id="myVideo"
+  <video autoplay controls="true" muted loop id="myVideo"
     poster="{{url('<front>')}}themes/contrib/bootstrap_sass/video/video-bg.jpg">
     <source src="{{url('<front>')}}themes/contrib/bootstrap_sass/video/golden-trees.mp4" type="video/mp4">
-  </video> #}
-
-
-  <div id="myVideo">
-    <iframe src="https://player.vimeo.com/video/426518312?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0"
-      allow="autoplay; fullscreen" allowfullscreen></iframe>
-  </div>
-
+  </video>
 
 
 
@@ -129,6 +122,9 @@
 
   function countDown(e) {
 
+    const noSleep = new NoSleep();
+    noSleep.enable();
+
     let button = e.target.attributes.id.value;
     let dataTime = e.target.attributes.dataTime.value * 60;
     //console.log('target value ',e.target.attributes.dataTime.value);
@@ -152,6 +148,8 @@
         clearInterval(downloadTimer);
     }, 1000);
     bell_start.play();
+    noSleep.disable();
+
   }
 
   window.addEventListener('click', countDown);

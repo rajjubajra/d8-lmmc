@@ -6,6 +6,7 @@ global-styling:
     js/global.js: {}
     js/view_motivation_quote.js: {}
     js/view_dhammapada.js: {}
+    js/NoSleep.min.js: {}
     
   
   
