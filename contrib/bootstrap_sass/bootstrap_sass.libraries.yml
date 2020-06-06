@@ -1,17 +1,15 @@
 global-styling:
   version: VERSION
-  
-  js-header:
-    header: true
-    js:
-      js/NoSleep.min.js: {}
+      
 
+      
   js: 
     js/popper.min.js: {}
     js/bootstrap.min.js: {}
     js/global.js: {}
     js/view_motivation_quote.js: {}
     js/view_dhammapada.js: {}
+    js/NoSleep.min.js: {}
   
   
 
