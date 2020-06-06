@@ -84,13 +84,13 @@ a{
     }
 
     @media (min-aspect-ratio: 16/9){
-        #myVideo, iframe {
+        #myVideo{
             width: 100%;
             height: auto;
             }
         }
     @media(max-aspecct-ratio: 16/9){
-        #myVideo, iframe{
+        #myVideo{
             width: auto;
             height: 100%;
         }
