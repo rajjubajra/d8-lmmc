@@ -135,7 +135,7 @@
 
     var downloadTimer = setInterval(function () {
       //Enable wakelock on mobile device
-      //noSleep.enable();
+      noSleep.enable();
       document.getElementById("progress-bar").innerHTML =
         `
         <div id="timeLeft"></div>
@@ -151,7 +151,7 @@
 
     }, 1000);
     bell_start.play();
-    //noSleep.disable();
+    noSleep.disable();
 
 
   }
