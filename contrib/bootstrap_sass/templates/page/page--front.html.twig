@@ -96,9 +96,15 @@
   /**
   Basic Meditation App
   */
+
+  let noSleep = new NoSleep();
+
+
   //console.log('url',window.location);
   let windowInnerWith = window.innerWidth;
   //console.log(windowInnerWith);
+
+
 
   document.getElementById('myVideo').style.width = windowInnerWith;
 
@@ -124,7 +130,6 @@
 
   function countDown(e) {
 
-    let noSleep = new NoSleep();
 
     let button = e.target.attributes.id.value;
     let dataTime = e.target.attributes.dataTime.value * 60;
