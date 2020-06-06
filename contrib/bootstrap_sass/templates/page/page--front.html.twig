@@ -97,10 +97,6 @@
   Basic Meditation App
   */
 
-  //Enable/disable wakelock on mobile device
-  let noSleep = new NoSleep();
-
-
 
   //console.log('url',window.location);
   let windowInnerWith = window.innerWidth;
@@ -131,6 +127,9 @@
 
 
   function countDown(e) {
+
+    //Enable/disable wakelock on mobile device
+    let noSleep = new NoSleep();
 
 
     let button = e.target.attributes.id.value;
