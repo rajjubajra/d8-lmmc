@@ -82,6 +82,7 @@ a{
     filter: grayscale(40%);
     }
 
+    
     @media (min-aspect-ratio: 16/9){
         #myVideo{
             width: 100%;
@@ -424,6 +425,7 @@ section.row.region.region-website-name {
     }
 
     #progress-bar{
+        position: relative;
         max-width: 450px;
         height: 85px;
         border-radius: 0px;
@@ -438,6 +440,10 @@ section.row.region.region-website-name {
         .stop{
             font-size: 2.5rem;
             color: #d2d2d2 !important;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 5px;
         }
     }
 }
