@@ -120,9 +120,11 @@
     return ret;
   }
 
+  const noSleep = new NoSleep();
+
   function countDown(e) {
 
-    const noSleep = new NoSleep();
+    //Enable wakelock on mobile device
     noSleep.enable();
 
     let button = e.target.attributes.id.value;
@@ -153,6 +155,8 @@
   }
 
   window.addEventListener('click', countDown);
+
+
 
   /** linear-background for buddha statue
   **********************************/
