@@ -73,6 +73,10 @@ a{
 
 #page-wrapper{
 
+    iframe {
+        object-fit: contain;
+    }
+
     
     #myVideo {
     position: absolute;
