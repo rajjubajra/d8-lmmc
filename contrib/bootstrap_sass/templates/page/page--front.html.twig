@@ -1,84 +1,93 @@
-
-<div id="page-wrapper" >
-  <!-- The video -->
-  <video autoplay controls="true" muted loop id="myVideo" poster="{{url('<front>')}}themes/contrib/bootstrap_sass/video/video-bg.jpg">
-      <source src="{{url('<front>')}}themes/contrib/bootstrap_sass/video/golden-trees.mp4" type="video/mp4">
-  </video> 
-  <div class="landing-page" id="page landing-page" >
-  
-  {# HEADER #}
-      {% include '@bootstrap_sass/includes/header.html.twig' %}
-  {# HIGHLIGHTED #}
-      {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
-  {# FEATURED-TOP #}
-      {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+<div id="page-wrapper">
 
 
-{# MAIN #}      
+  <!-- The video    
+  <video autoplay controls="true" muted loop id="myVideo"
+    poster="{{url('<front>')}}themes/contrib/bootstrap_sass/video/video-bg.jpg">
+    <source src="{{url('<front>')}}themes/contrib/bootstrap_sass/video/golden-trees.mp4" type="video/mp4">
+  </video>
+  -->
+  <div class="vimeo-bg">
+    <iframe src="https://player.vimeo.com/video/426518312?autoplay=1&loop=1&title=0&byline=0&portrait=0"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="landing-page" id="page landing-page">
+
+    {# HEADER #}
+    {% include '@bootstrap_sass/includes/header.html.twig' %}
+    {# HIGHLIGHTED #}
+    {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
+    {# FEATURED-TOP #}
+    {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+
+
+    {# MAIN #}
     <div class="container-fluid bg-white">
       <div class="row">
         <div class="col-md-12">
           <div class="front-page bg-buddha-statue">
             <div class="items">
-                <ul id="time" class="time"></ul>
-                <h1><span id="greetings" class="greetings">Welcome</span></h1>
-                <div id="progress-bar">
-                    <ul class="medi-time">
-                      <li><button id="timeslot" dataTime="2">2</button></li>
-                      <li><button id="timeslot" dataTime="5">5</button></li>
-                      <li><button id="timeslot" dataTime="15">15</button></li>
-                      <li><button id="timeslot" dataTime="30">30</button></li>
-                      <li><button id="timeslot" dataTime="60">60</button></li>
-                    </ul>
-                    <div class="guide">Please choose time slot for meditation</div>
-                </div>
+              <ul id="time" class="time"></ul>
+              <h1><span id="greetings" class="greetings">Welcome</span></h1>
+              <div id="progress-bar">
+                <ul class="medi-time">
+                  <li><button id="timeslot" dataTime="2">2</button></li>
+                  <li><button id="timeslot" dataTime="5">5</button></li>
+                  <li><button id="timeslot" dataTime="15">15</button></li>
+                  <li><button id="timeslot" dataTime="30">30</button></li>
+                  <li><button id="timeslot" dataTime="60">60</button></li>
+                </ul>
+                <div class="guide">Please choose time slot for meditation</div>
+              </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
     </div>
 
 
 
-{# FEATURED-BOTTOM #}
+    {# FEATURED-BOTTOM #}
     {% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
 
-</div>
+  </div>
 
-<div class="container-fluid bg-white">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="website-name">
-      {{ page.website_name }}
+  <div class="container-fluid bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="website-name">
+          {{ page.website_name }}
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="container-fluid bg-white">
-    <div class="row">  
-        <div class="col-md-12">
-            <section class="front-2">
-                <div class="buddha-bachana">    
-                  <p id="dhammapada" >Dhammapada</p>
-                </div>
-            </section>
-        </div>
+  <div class="container-fluid bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <section class="front-2">
+          <div class="buddha-bachana">
+            <p id="dhammapada">Dhammapada</p>
+          </div>
+        </section>
+      </div>
     </div>
 
     <!-- PROMO BOX [ jsonapi data ] -->
     <div id="promo-block" class="row"></div>
 
 
-</div> 
+  </div>
 
 
 
 
-</div>{#  class page-wrapper  #} 
+</div>{#  class page-wrapper  #}
 
-  
-{# FOOTER #}  
+
+{# FOOTER #}
 {% include '@bootstrap_sass/includes/footer.html.twig' %}
 
 
@@ -90,85 +99,84 @@
   /**
   Basic Meditation App
   */
-//console.log('url',window.location);
-let windowInnerWith = window.innerWidth;
-//console.log(windowInnerWith);
+  //console.log('url',window.location);
+  let windowInnerWith = window.innerWidth;
+  //console.log(windowInnerWith);
 
-document.getElementById('myVideo').style.width = windowInnerWith;
+  document.getElementById('myVideo').style.width = windowInnerWith;
 
-function fancyTimeFormat(time)
-    {   
-        // Hours, minutes and seconds
-        var hrs = ~~(time / 3600);
-        var mins = ~~((time % 3600) / 60);
-        var secs = ~~time % 60;
-    
-        // Output like "1:01" or "4:03:59" or "123:03:59"
-        var ret = "";
-    
-        if (hrs > 0) {
-            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-        }
-    
-        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
-        ret += "" + secs;
-        return ret;
-    }  
+  function fancyTimeFormat(time) {
+    // Hours, minutes and seconds
+    var hrs = ~~(time / 3600);
+    var mins = ~~((time % 3600) / 60);
+    var secs = ~~time % 60;
 
-function countDown(e){
- 
-  let button = e.target.attributes.id.value;
-  let dataTime = e.target.attributes.dataTime.value * 60;
-  //console.log('target value ',e.target.attributes.dataTime.value);
-  var timeleft = dataTime;
-  var bell_start = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_start.mp3");
-  var bell_end = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_end.mp3");
-    
-      var downloadTimer = setInterval(function(){
-        
-        document.getElementById("progress-bar").innerHTML = 
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = "";
+
+    if (hrs > 0) {
+      ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+    return ret;
+  }
+
+  function countDown(e) {
+
+    let button = e.target.attributes.id.value;
+    let dataTime = e.target.attributes.dataTime.value * 60;
+    //console.log('target value ',e.target.attributes.dataTime.value);
+    var timeleft = dataTime;
+    var bell_start = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_start.mp3");
+    var bell_end = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_end.mp3");
+
+    var downloadTimer = setInterval(function () {
+
+      document.getElementById("progress-bar").innerHTML =
         `
         <div id="timeLeft"></div>
         <div><a href="" class="stop"><i class="far fa-stop-circle"></i></a></div>
         `;
-        
-        timeleft === 5 ? bell_end.play() : console.log('do nothing');
-        document.getElementById("progress-bar").value = dataTime - timeleft;
-        document.getElementById("timeLeft").innerHTML = fancyTimeFormat(timeleft);
-        timeleft -= 1;
-        if(timeleft < 0)
-          clearInterval(downloadTimer);
-      }, 1000);
-      bell_start.play();
-}
 
-window.addEventListener('click', countDown);
+      timeleft === 5 ? bell_end.play() : console.log('do nothing');
+      document.getElementById("progress-bar").value = dataTime - timeleft;
+      document.getElementById("timeLeft").innerHTML = fancyTimeFormat(timeleft);
+      timeleft -= 1;
+      if (timeleft < 0)
+        clearInterval(downloadTimer);
+    }, 1000);
+    bell_start.play();
+  }
 
-/** linear-background for buddha statue
-**********************************/
-const canvas_maine = document.querySelector('.dialog-off-canvas-main-canvas');
-//canvas_maine.style.background = 'linear-gradient(to right, transparent,transparent,transparent, #ffffff)';  
+  window.addEventListener('click', countDown);
 
-//console.log(ui_promo_block);
-//json URI
-const uri_jsonapi_promo = `${window.location.href}jsonapi/block_content/front_page_boxes`;
+  /** linear-background for buddha statue
+  **********************************/
+  const canvas_maine = document.querySelector('.dialog-off-canvas-main-canvas');
+  //canvas_maine.style.background = 'linear-gradient(to right, transparent,transparent,transparent, #ffffff)';  
 
-/* run function view_promo_block*/
-view_promo_block(uri_jsonapi_promo);
+  //console.log(ui_promo_block);
+  //json URI
+  const uri_jsonapi_promo = `${window.location.href}jsonapi/block_content/front_page_boxes`;
 
-function view_promo_block(request){
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  /* run function view_promo_block*/
+  view_promo_block(uri_jsonapi_promo);
+
+  function view_promo_block(request) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-         // Typical action to be performed when the document is ready:
+        // Typical action to be performed when the document is ready:
         //console.log('xhttp req', xhttp.responseText);
         let response = JSON.parse(xhttp.responseText);
         let dbArr = response.data;
-       // console.log(dbArr);
-       // console.log(dbArr[0].attributes.body);
+        // console.log(dbArr);
+        // console.log(dbArr[0].attributes.body);
 
-        let output = ``; 
-        dbArr.map((item, index)=>{
+        let output = ``;
+        dbArr.map((item, index) => {
           return output += `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
               <div class="promo-boxes">
                 <h1>${item.attributes.info}</h1>
@@ -180,51 +188,50 @@ function view_promo_block(request){
         document.getElementById("promo-block").innerHTML = output;
 
       }
-  };
-  xhttp.open("GET", request, true);
-  xhttp.send();
-}
+    };
+    xhttp.open("GET", request, true);
+    xhttp.send();
+  }
 
 
 
-/** myVideo dynamic grayscal every two hours time  */
-const _myVedeo = document.querySelector('#myVideo'); // ui video
-const _buddhaStatue = document.querySelector('.bg-buddha-statue'); // ui image
-const _date = new Date();
-let _hour = _date.getHours(); //get Hour
-//console.log(_hour, '-', _myVedeo);
-if( _hour < 6 || _hour > 19 ){
-  _myVedeo.style.filter = 'grayscale(100%)';
-  _buddhaStatue.style.filter = 'grayscale(100%)';
-}
+  /** myVideo dynamic grayscal every two hours time  */
+  const _myVedeo = document.querySelector('#myVideo'); // ui video
+  const _buddhaStatue = document.querySelector('.bg-buddha-statue'); // ui image
+  const _date = new Date();
+  let _hour = _date.getHours(); //get Hour
+  //console.log(_hour, '-', _myVedeo);
+  if (_hour < 6 || _hour > 19) {
+    _myVedeo.style.filter = 'grayscale(100%)';
+    _buddhaStatue.style.filter = 'grayscale(100%)';
+  }
 
 
-/** SCROLL-TOP BUTTON VIEW on scroll up **/
-var scrollPos = 0;
-// adding scroll event
-window.addEventListener('scroll', function(){
-  // detects new state and compares it with the new one
-  if ((document.body.getBoundingClientRect()).top > scrollPos)
-  console.log('scollring up....');
-  
-	else
-	console.log('scrolling down...');
-	// saves the new position for iteration.
-	scrollPos = (document.body.getBoundingClientRect()).top;
-});
+  /** SCROLL-TOP BUTTON VIEW on scroll up **/
+  var scrollPos = 0;
+  // adding scroll event
+  window.addEventListener('scroll', function () {
+    // detects new state and compares it with the new one
+    if ((document.body.getBoundingClientRect()).top > scrollPos)
+      console.log('scollring up....');
+
+    else
+      console.log('scrolling down...');
+    // saves the new position for iteration.
+    scrollPos = (document.body.getBoundingClientRect()).top;
+  });
 
 
-/**
-remove header drop-shadow on frontpage only
-**/
-const _header = document.querySelector('header#header');
-_header.style.boxShadow = '0px 0px 0px 0px #ccc';
-const _dropdownMenu = document.querySelectorAll('ul.dropdown-menu');
-for(let i = 0; i <= _dropdownMenu.length; i++){
-  _dropdownMenu[i].style.boxShadow = '0px 0px 0px 0px #ccc'; 
-}
+  /**
+  remove header drop-shadow on frontpage only
+  **/
+  const _header = document.querySelector('header#header');
+  _header.style.boxShadow = '0px 0px 0px 0px #ccc';
+  const _dropdownMenu = document.querySelectorAll('ul.dropdown-menu');
+  for (let i = 0; i <= _dropdownMenu.length; i++) {
+    _dropdownMenu[i].style.boxShadow = '0px 0px 0px 0px #ccc';
+  }
 
 
 
 </script>
-
