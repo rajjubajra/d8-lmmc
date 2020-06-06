@@ -1,5 +1,30 @@
-<div id="page-wrapper">
+<script>
+  // Loads the YouTube IFrame API JavaScript code.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/5l0iH9fA09s";
+  // Inserts YouTube JS code into the page.
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+  var player;
+
+  // onYouTubeIframeAPIReady() is called when the IFrame API is ready to go.
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      videoId: 'LS-ErOKpO4E', // the ID of the video (mentioned above)
+      playerVars: {
+        autoplay: 1, // start automatically
+        controls: 0, // don't show the controls (we can't click them anyways)
+        modestbranding: 1, // show smaller logo
+        loop: 1, // loop when complete
+        playlist: 'kNizPk7xBbs' // required for looping, matches the video ID
+      }
+    });
+  }
+</script>
+
+
+<div id="page-wrapper">
 
   {# <!-- The video  -->
   <video autoplay controls="true" muted loop id="myVideo"
@@ -8,10 +33,9 @@
   </video> #}
 
 
-  <div class="vimeo-bg">
-    <iframe src="https://player.vimeo.com/video/426518312?autoplay=1&loop=1&title=0&byline=0&portrait=0"
-      style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen"
-      allowfullscreen></iframe>
+  <div class="bg-video">
+    <div class="overlay"></div>
+    <div id="player"></div>
   </div>
 
   <div class="landing-page" id="page landing-page">
